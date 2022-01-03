@@ -1,0 +1,15 @@
+
+<form #heroForm="ngForm">
+<div class="form-group">
+    <h1>Hero Form</h1>
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" required>
+    <label for="alterEgo">alter Ego</label>
+    <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
+
+    <label for="power">Hero Power</label>
+    <select class="form-control" id="power" [(ngModel)]="model.power" name="power" required>
+      <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+    </select>
+  </div>
+</form>
